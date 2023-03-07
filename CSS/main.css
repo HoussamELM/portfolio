@@ -104,7 +104,14 @@ h1 {
   }
   .rightContainer{
     max-width: 80% !important;
+    margin-bottom: 10%;
   }
+  .leftContainer{
+    margin-bottom: 10%;
+  }
+
+
+  .iconcolor {color:white !important;}
 }
 
 #type:after {
