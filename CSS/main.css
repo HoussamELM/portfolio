@@ -1,0 +1,116 @@
+body {
+  height: 100vh;
+  background-color: black;
+  background-image: url("/images/bbblurry (3).svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+}
+.leftContainer{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 10%;
+}
+.leftContainer ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(3rem, 10vw, 10rem);
+  color: white;
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  margin: 0;
+}
+
+.social a {
+  transform-origin: center;
+  transition-duration: 100ms;
+}
+.social {
+  display: flex;
+  margin-top: 1.5rem;
+}
+.social li {
+  height: 2rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  width: 2rem;
+}
+.social a {
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+  height: 2rem;
+  justify-content: center;
+  opacity: 0.5;
+  transition-property: opacity, transform;
+  width: 2rem;
+  will-change: opacity, transform;
+}
+.social a:hover {
+  opacity: 1;
+  transform: scale(1.25);
+}
+.social a:active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.iconcolor {color:grey;}
+
+#type {
+  font-family: 'Space Mono', monospace;
+  color: white;
+  align-self: flex-end;
+ 
+}
+
+@media only screen and (max-width: 600px) {
+  #type {
+    align-self: flex-start !important;
+    margin-left: 5%;
+    margin-top: 2%;
+    height: 40px;
+  }
+  .rightContainer{
+    max-width: 80% !important;
+  }
+}
+
+#type:after {
+  content: "|";
+  color: white;
+  font-weight: bolder;
+  animation: caret 1s infinite;
+  opacity: 0;
+}
+@keyframes caret {
+  50% {
+    opacity: 1;
+  }
+}
+
